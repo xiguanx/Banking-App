@@ -1,21 +1,21 @@
-CREATE TABLE IF NOT EXISTS `customer` (
-    `customer_id` int AUTO_INCREMENT  PRIMARY KEY,
-    `name` varchar(100) NOT NULL,
-    `email` varchar(100) NOT NULL,
-    `mobile_number` varchar(20) NOT NULL,
-    `created_at` date NOT NULL,
-    `created_by` varchar(20) NOT NULL,
-    `updated_at` date DEFAULT NULL,
-    `updated_by` varchar(20) DEFAULT NULL
+create table if not exists 'customer'(
+    'customer_id' int auto_increment primary key,
+    'name' varchar(100) not null,
+    'email' varchar(100) not null,
+    'mobile_number' varchar(20) not null,
+    'created_at' date not null,
+    'created_by' varchar(20) not null,
+    'updated_at' date default null,
+    'updated_by' varchar(20) default null
 );
 
-CREATE TABLE IF NOT EXISTS `accounts` (
-    `customer_id` int NOT NULL,
-    `account_number` int AUTO_INCREMENT  PRIMARY KEY,
-    `account_type` varchar(100) NOT NULL,
-    `branch_address` varchar(200) NOT NULL,
-    `created_at` date NOT NULL,
-    `created_by` varchar(20) NOT NULL,
-    `updated_at` date DEFAULT NULL,
-    `updated_by` varchar(20) DEFAULT NULL
+create table if not exists 'accounts'(
+    'customer_id' int not null,
+    'account_number' int auto_increment primary key,
+    'account_type' varchar(100) not null,
+    'branch_address' varchar(200) not null,
+    'created_at' date not null,
+    'created_by' varchar(20) not null,
+    'updated_at' date default null,
+    'updated_by' varchar(20) default null
 );
