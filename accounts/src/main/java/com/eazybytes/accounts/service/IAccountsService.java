@@ -5,7 +5,14 @@ import com.eazybytes.accounts.dto.CustomerDto;
 public interface IAccountsService {
     /**
      *
-     * @param customerDto
+     * @param customerDto - CustomerDto Object
      */
     void createAccount(CustomerDto customerDto);
+
+    /**
+     *
+     * @param mobileNumber - input mobile number
+     * @return Accounts Details based on a given mobileNumber
+     */
+    CustomerDto fetchAccount(String mobileNumber);
 }
